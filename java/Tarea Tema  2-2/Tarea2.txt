@@ -1,0 +1,74 @@
+dia + 2
+
+    if año es divisible /4{
+
+        if mes es 2{
+
+            swit (mes)
+
+            case 1  / 31 dias
+
+            case 3  
+
+            case 5 
+
+            case 7
+
+            case 8
+
+            case 10
+
+            case 12
+
+            
+
+        }
+        else{
+
+            if mes es 1 3 5 7 8 10 12 // 31 dias
+
+                if mes es => 31
+
+                    dia = 0
+
+                    mes + 1
+
+                if mes es => 32
+
+                    dia =
+
+
+
+
+            if mes es 2 4 6 9 11  // 30 dias
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+    }   
+
+    else{
+
+            if mes es 1 3 5 7 8 10 12
+
+
+
+
+            if mes es 2 4 6 9 11
+}
+
+
+
+
+
