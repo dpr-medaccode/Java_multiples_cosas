@@ -5,13 +5,7 @@ public class Formas5 {
 
             for (int j = 0; j < 5; j++) {
 
-                if (i > 4) {
-
-                    System.out.print("  ");
-
-                }
-
-                if (i < j ) {
+                if (i <= j ) {
 
                     System.out.print("* ");
                     
