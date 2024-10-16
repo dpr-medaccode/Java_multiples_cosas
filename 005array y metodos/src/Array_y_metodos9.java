@@ -14,7 +14,7 @@ public class Array_y_metodos9 {
         int SumaTotal = 0;
 
         for (int i = 0; i < array.length; i++) {
-            SumaTotal = SumaTotal + array[i];
+            SumaTotal += array[i];
         }
 
         return SumaTotal;
