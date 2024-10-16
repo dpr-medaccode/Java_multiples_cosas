@@ -1,7 +1,7 @@
 public class Funciones {
     public static void main(String[] args) throws Exception {
 
-        int num = 83;
+        int num = 346365637;
 
         boolean acc = Primo(num);
 
