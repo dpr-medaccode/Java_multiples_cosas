@@ -68,7 +68,7 @@ public class App {
         } while (accbus == true);
 
         System.out.println("¿Cuántos productos reciclables (plástico, papel, vidrio) sueles reciclar cada\r\n" + //
-                " * semana?");
+                " semana?");
 
         boolean accre = true;
 
@@ -102,13 +102,13 @@ public class App {
 
         int agua = sc.nextInt();
 
-        puntuación = agua / 10;
+        puntuación += agua / 10;
 
         System.out.println(puntuación);
 
         int estrella = (int) Math.ceil(puntuación) / 10;
 
-        for(int i = 0 ; i < estrella; i += 10 ){
+        for(int i = 0 ; i < estrella; i++ ){
 
             System.out.print("*");
 
