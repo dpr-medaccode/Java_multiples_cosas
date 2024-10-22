@@ -4,11 +4,11 @@ public class Persona {
 
     private String fecha;
 
-    public Persona(String n, String f) {
+    public Persona(String nombre, String fecha) {
 
-        this.nombre = n;
+        this.nombre = nombre;
 
-        this.fecha = f;
+        this.fecha = fecha;
 
     }
 
