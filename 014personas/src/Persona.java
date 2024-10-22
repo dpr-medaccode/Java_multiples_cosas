@@ -4,7 +4,11 @@ public class Persona {
 
     public Persona(int edad) {
 
-        this.edad = edad;
+        if (validaredad(edad) == true) {
+
+            this.edad = edad;
+
+        }
 
     }
 
@@ -16,11 +20,23 @@ public class Persona {
 
     public void setedad(int e) {
 
-        if (e>= 0 && e <= 120) {
+        if (validaredad(e) == true) {
 
             this.edad = e;
 
         }
+
+    }
+
+    private boolean validaredad(int ed) {
+
+        if (ed >= 0 && ed <= 120) {
+
+            return true;
+
+        }
+
+        return false;
 
     }
 
