@@ -1,10 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
         
-        Persona p = new Persona(19);
+        Persona p1 = new Persona(25, "Javi");
 
-        p.setedad(12999);
+        System.out.println(p1);
 
-        System.out.println(p);
     }
 }
