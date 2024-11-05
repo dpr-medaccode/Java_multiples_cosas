@@ -1,2 +1,2 @@
 # Java_multiples_cosas
-repositorio donde guardo todo lo realcionado ha java
+repositorio donde guardo todo lo realcionado con java
