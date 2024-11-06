@@ -47,10 +47,9 @@ public class Reloj {
     @Override
     public String toString() {
 
-        // return this.horas + " / " + this.minutos + " / " + this.segundos;
-
         return String.format("%02d", this.horas.getNumero()) + ":" + String.format("%02d", this.minutos.getNumero())
                 + ":" + String.format("%02d", this.segundos.getNumero());
+
     }
 
     public void incrementar() {
