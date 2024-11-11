@@ -8,6 +8,8 @@ public class Contrato {
 
     public Contrato(int salario, boolean jornada, String clausulas) {
 
+        this();
+
         if (salario < 0) {
 
             this.salario = 0;
