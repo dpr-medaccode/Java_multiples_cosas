@@ -1,14 +1,14 @@
 public class Bulbasur extends Pokemon {
 
-    public Bulbasur(String nombre, String tipo) {
+    public Bulbasur(String nombre) {
 
-        super(nombre, tipo);
+        super(nombre, "Planta");
 
     }
 
     public String toString() {
 
-        return "Bulbasur " + super.ps;
+        return "Bulbasur " + super.nombre + " " + super.ps;
 
     }
 

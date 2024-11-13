@@ -13,7 +13,7 @@ public class Pokemon {
     public Pokemon(String nombre, String tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
-        this.nivel = 0;
+        this.nivel = 1;
         this.ps = 1000;
         this.defendiendo = false;
 
@@ -70,6 +70,10 @@ public class Pokemon {
         if (!otro.defendiendo) {
 
             otro.ps -= 100;
+
+        } else {
+
+            otro.ps -= 50;
 
         }
 
