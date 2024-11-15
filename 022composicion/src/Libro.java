@@ -17,7 +17,7 @@ public class Libro {
 
     }
 
-    public void addPagina(int numpag, String text){
+    public void addPagina(int numpag, String text) {
 
         Pagina p = new Pagina(numpag, text);
 
@@ -43,15 +43,19 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "Libro [titulo=" + titulo + ", isbn=" + isbn + "]";
+        return "Libro [ titulo = " + titulo + ", isbn = " + isbn + " ]";
     }
 
-    private ArrayList<Pagina> getPaginas(){
+    private ArrayList<Pagina> getPaginas() {
 
         return this.paginas;
 
     }
-    
 
+    public void setPaginas(Pagina nueva) {
+
+        
+
+    }
 
 }

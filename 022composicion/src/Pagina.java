@@ -27,9 +27,7 @@ public class Pagina {
 
     @Override
     public String toString() {
-        return "Pagina [numeroPagina=" + numeroPagina + ", texto=" + texto + "]";
+        return "Pagina [ numeroPagina = " + numeroPagina + ", texto = " + texto + " ]";
     }
-
-    
-    
+   
 }
