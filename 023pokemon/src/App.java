@@ -7,5 +7,7 @@ public class App {
 
         Squirtel s1 = new Squirtel("Juan");
 
+        System.out.println(s1);
+
     }
 }
