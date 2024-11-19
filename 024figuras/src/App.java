@@ -13,12 +13,12 @@ public class App {
 
         figuras.add(c1);
 
-        for (int i = 0; i < figuras.size(); i++){
+        for (int i = 0; i < figuras.size(); i++) {
 
             System.out.println(figuras.get(i).calcularArea());
 
         }
 
     }
-    
+
 }
