@@ -4,7 +4,7 @@ public class Vehiculo {
 
     protected boolean disponible;
 
-    public Vehiculo (String matricula){
+    public Vehiculo(String matricula) {
 
         this.matricula = matricula;
 
@@ -12,7 +12,7 @@ public class Vehiculo {
 
     }
 
-    public Vehiculo (Vehiculo v){
+    public Vehiculo(Vehiculo v) {
 
         this.matricula = v.matricula;
 
@@ -41,14 +41,14 @@ public class Vehiculo {
         return "Vehiculo [matricula=" + matricula + ", disponible=" + disponible + "]";
     }
 
-    public boolean Alquilar () {
+    public boolean Alquilar() {
 
         if (this.disponible) {
 
             this.disponible = false;
 
             return true;
-            
+
         } else {
 
             return false;
@@ -56,5 +56,5 @@ public class Vehiculo {
         }
 
     }
-    
+
 }

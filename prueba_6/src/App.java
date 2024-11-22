@@ -53,24 +53,23 @@ public class App {
                         System.out.println(a1.desAlquilar() + " es el precio del alquiler ");
 
                         a1.disponible = true;
-                        
+
                     } else {
 
                         System.out.println("el autobus esta disponible, no esta alquilado a su nombre");
 
                     }
 
-
                     break;
 
-                    case 3:
+                case 3:
 
                     if (!a1.disponible) {
 
                         a1.paseoAutobus();
 
                         System.out.println("has dado un paseo en autobus");
-                        
+
                     } else {
 
                         System.out.println("alquila uno para dar un paseo");
@@ -95,14 +94,14 @@ public class App {
 
                     break;
 
-                    case 5:
+                case 5:
 
                     if (!t1.disponible) {
 
                         System.out.println(t1.desAlquilar() + " es el precio del alquiler ");
 
                         a1.disponible = true;
-                        
+
                     } else {
 
                         System.out.println("el Tractor esta disponible, no esta alquilado a su nombre");
@@ -111,36 +110,31 @@ public class App {
 
                     break;
 
-                    case 6:
+                case 6:
 
                     if (!t1.disponible) {
 
                         t1.paseoTractor();
 
                         System.out.println("has dado un paseo en tractor");
-                        
+
                     } else {
 
                         System.out.println("alquila uno para dar un paseo");
 
                     }
 
-
-
                     break;
 
-                    case 7:
+                case 7:
 
                     var = false;
 
                     break;
 
-
-                    
-
                 default:
 
-                System.out.println("introduze un valor posible");
+                    System.out.println("introduze un valor posible");
 
                     break;
             }

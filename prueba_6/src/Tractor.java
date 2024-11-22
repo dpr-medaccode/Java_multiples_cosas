@@ -9,7 +9,7 @@ public class Tractor extends Vehiculo {
 
     private LocalDateTime cantidadDias;
 
-    public Tractor(String matricula , int precio) {
+    public Tractor(String matricula, int precio) {
 
         super(matricula);
 
@@ -21,9 +21,9 @@ public class Tractor extends Vehiculo {
 
     }
 
-    public Tractor ( Tractor a){
+    public Tractor(Tractor a) {
 
-        super((Vehiculo)a);
+        super((Vehiculo) a);
 
         this.precioDia = a.precioDia;
 
@@ -63,14 +63,14 @@ public class Tractor extends Vehiculo {
                 + ", cantidadDias=" + cantidadDias + "]";
     }
 
-    public boolean paseoTractor(){
+    public boolean paseoTractor() {
 
         if (!super.disponible) {
 
             this.cantidadDias = this.cantidadDias.plusDays(3);
 
             return true;
-            
+
         } else {
 
             return false;
@@ -79,7 +79,7 @@ public class Tractor extends Vehiculo {
 
     }
 
-    public int desAlquilar(){
+    public int desAlquilar() {
 
         if (!super.disponible) {
 
@@ -87,7 +87,7 @@ public class Tractor extends Vehiculo {
 
             cantidadDias = fechaCreacion;
 
-            int apallo = (int)ChronoUnit.DAYS.between(fechaCreacion, val);
+            int apallo = (int) ChronoUnit.DAYS.between(fechaCreacion, val);
 
             return apallo * precioDia;
 
