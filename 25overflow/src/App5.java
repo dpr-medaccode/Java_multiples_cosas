@@ -21,8 +21,6 @@ public class App5 {
 
         return x + sumatorio(arr, n);
 
-
-
     }
 
 }
