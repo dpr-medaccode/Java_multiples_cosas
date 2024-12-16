@@ -3,38 +3,39 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws Exception {
 
-         Entrenador entrenadorEspaña = new Entrenador(1, "Luis Enrique", "Martínez",
-         "1970-05-08", 75.0, 1.83, 1001);
-         Entrenador entrenadorArgentina = new Entrenador(2, "Lionel Scaloni",
-         "Scaloni", "1978-05-16", 78.0, 1.85, 1002);
+        Entrenador entrenadorEspaña = new Entrenador(1, "Luis Enrique", "Martínez",
+                "1970-05-08", 75.0, 1.83, 1001);
+        Entrenador entrenadorArgentina = new Entrenador(2, "Lionel Scaloni",
+                "Scaloni", "1978-05-16", 78.0, 1.85, 1002);
 
-         Futbolista futbolistaEspaña1 = new Futbolista(1, "Sergio Ramos", "Ponce",
-         "1986-03-30", 80.0, 1.82, 4, "Defensa");
-         Futbolista futbolistaEspaña2 = new Futbolista(2, "David de Gea", "Fernández",
-         "1990-11-07", 95.0, 1.92, 1, "Portero");
-         Futbolista futbolistaEspaña3 = new Futbolista(3, "Gerard Piqué", "Moya",
-         "1987-02-04", 85.0, 1.94, 3, "Defensa");
-         Futbolista futbolistaEspaña4 = new Futbolista(4, "Andrés Iniesta", "Luján",
-         "1984-05-11", 68.0, 1.71, 6, "Centrocampista");
-         Futbolista futbolistaEspaña5 = new Futbolista(5, "Iker Casillas",
-         "Fernández", "1981-05-20", 84.0, 1.87, 13, "Portero");
-         Futbolista futbolistaEspaña6 = new Futbolista(6, "Cesc Fàbregas", "Soler",
-         "1987-05-04", 74.0, 1.80, 10, "Centrocampista");
-         Futbolista futbolistaEspaña7 = new Futbolista(7, "Xavi Hernández", "Cruz",
-         "1980-01-25", 70.0, 1.70, 8, "Centrocampista");
-         Futbolista futbolistaArgentina1 = new Futbolista(8, "Lionel Messi",
-         "Cuccittini", "1987-06-24", 72.0, 1.70, 10, "Delantero");
-         Futbolista futbolistaArgentina2 = new Futbolista(9, "Sergio Agüero", "Del Castillo", "1988-06-02", 80.0, 1.73, 9, "Delantero");
-         Futbolista futbolistaArgentina3 = new Futbolista(10, "Ángel Di María",
-         "Hernández", "1988-02-14", 75.0, 1.80, 11, "Extremo");
-         Futbolista futbolistaArgentina4 = new Futbolista(11, "Gonzalo Higuaín",
-         "González", "1987-12-10", 88.0, 1.85, 9, "Delantero");
-         Futbolista futbolistaArgentina5 = new Futbolista(12, "Ezequiel Garay",
-         "Ramos", "1986-10-10", 85.0, 1.88, 22, "Defensa");
-         Futbolista futbolistaArgentina6 = new Futbolista(13, "Javier Mascherano",
-         "Pereyra", "1984-06-08", 75.0, 1.74, 14, "Centrocampista");
-         Futbolista futbolistaArgentina7 = new Futbolista(14, "Nicolás Otamendi",
-         "Pérez", "1988-02-12", 80.0, 1.85, 17, "Defensa");
+        Futbolista futbolistaEspaña1 = new Futbolista(1, "Sergio Ramos", "Ponce",
+                "1986-03-30", 80.0, 1.82, 4, "Defensa");
+        Futbolista futbolistaEspaña2 = new Futbolista(2, "David de Gea", "Fernández",
+                "1990-11-07", 95.0, 1.92, 1, "Portero");
+        Futbolista futbolistaEspaña3 = new Futbolista(3, "Gerard Piqué", "Moya",
+                "1987-02-04", 85.0, 1.94, 3, "Defensa");
+        Futbolista futbolistaEspaña4 = new Futbolista(4, "Andrés Iniesta", "Luján",
+                "1984-05-11", 68.0, 1.71, 6, "Centrocampista");
+        Futbolista futbolistaEspaña5 = new Futbolista(5, "Iker Casillas",
+                "Fernández", "1981-05-20", 84.0, 1.87, 13, "Portero");
+        Futbolista futbolistaEspaña6 = new Futbolista(6, "Cesc Fàbregas", "Soler",
+                "1987-05-04", 74.0, 1.80, 10, "Centrocampista");
+        Futbolista futbolistaEspaña7 = new Futbolista(7, "Xavi Hernández", "Cruz",
+                "1980-01-25", 70.0, 1.70, 8, "Centrocampista");
+        Futbolista futbolistaArgentina1 = new Futbolista(8, "Lionel Messi",
+                "Cuccittini", "1987-06-24", 72.0, 1.70, 10, "Delantero");
+        Futbolista futbolistaArgentina2 = new Futbolista(9, "Sergio Agüero", "Del Castillo", "1988-06-02", 80.0, 1.73,
+                9, "Delantero");
+        Futbolista futbolistaArgentina3 = new Futbolista(10, "Ángel Di María",
+                "Hernández", "1988-02-14", 75.0, 1.80, 11, "Extremo");
+        Futbolista futbolistaArgentina4 = new Futbolista(11, "Gonzalo Higuaín",
+                "González", "1987-12-10", 88.0, 1.85, 9, "Delantero");
+        Futbolista futbolistaArgentina5 = new Futbolista(12, "Ezequiel Garay",
+                "Ramos", "1986-10-10", 85.0, 1.88, 22, "Defensa");
+        Futbolista futbolistaArgentina6 = new Futbolista(13, "Javier Mascherano",
+                "Pereyra", "1984-06-08", 75.0, 1.74, 14, "Centrocampista");
+        Futbolista futbolistaArgentina7 = new Futbolista(14, "Nicolás Otamendi",
+                "Pérez", "1988-02-12", 80.0, 1.85, 17, "Defensa");
 
         // SeleccionFutbol seleccionEspaña = new SeleccionFutbol(1, "España");
         // SeleccionFutbol seleccionArgentina = new SeleccionFutbol(2, "Argentina");
@@ -83,7 +84,6 @@ public class App {
 
         mundial2024.getSeleccion(1).listFutbolistasSobrepeso();
 
-
         // seleccionEspaña.listFutbolistasSobrepeso();
 
         // System.out.println();
@@ -92,7 +92,7 @@ public class App {
 
         // System.out.println();
 
-        // System.out.println(futbolistaArgentina2.tieneSobrepeso() ? "sobrepeso" : "no sobrepeso");
+        System.out.println(futbolistaArgentina3.tieneSobrepeso() ? "sobrepeso" : "no sobrepeso");
 
     }
 }
