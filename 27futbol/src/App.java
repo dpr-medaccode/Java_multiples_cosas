@@ -82,6 +82,8 @@ public class App {
         mundial2024.getSeleccion(2).addPersona(futbolistaArgentina6);
         mundial2024.getSeleccion(2).addPersona(futbolistaArgentina7);
 
+        System.out.println();
+
         mundial2024.getSeleccion(1).listFutbolistasSobrepeso();
 
         // seleccionEspaña.listFutbolistasSobrepeso();
@@ -90,9 +92,12 @@ public class App {
 
         // seleccionArgentina.listFutbolistasSobrepeso();
 
-        // System.out.println();
+        System.out.println();
+
+        System.out.println(futbolistaArgentina2.tieneSobrepeso() ? "sobrepeso" : "no sobrepeso");
 
         System.out.println(futbolistaArgentina3.tieneSobrepeso() ? "sobrepeso" : "no sobrepeso");
 
     }
+
 }
