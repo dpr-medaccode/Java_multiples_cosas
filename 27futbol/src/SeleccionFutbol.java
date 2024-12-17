@@ -20,7 +20,7 @@ public class SeleccionFutbol {
 
     
 
-    public int getId() {
+    protected int getId() {
         return id;
     }
 
