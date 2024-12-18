@@ -16,7 +16,7 @@ public class Futbolista extends Persona implements Deportista {
     }
 
     public int getDorsal() {
-        return dorsal;
+        return dorsal; 
     }
 
     public void setDorsal(int dorsal) {

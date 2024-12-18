@@ -84,6 +84,10 @@ public class App {
 
         System.out.println();
 
+        mundial2024.getSeleccion(2).listFutbolistasSobrepeso();
+
+        System.out.println();
+
         mundial2024.getSeleccion(1).listFutbolistasSobrepeso();
 
         // seleccionEspaña.listFutbolistasSobrepeso();
