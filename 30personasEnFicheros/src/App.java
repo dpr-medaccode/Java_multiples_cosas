@@ -1,25 +1,57 @@
-import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-         try {
 
-            FileReader archivo = new FileReader("personas.txt");
+        ArrayList<Persona> personas = new ArrayList<Persona>();
 
-            int dato = archivo.read();
+        Collections.addAll(personas, new Persona("Paco", "lopez", 45),
+                new Persona("Antonio", "Garcia", 38),
+                new Persona("Juan", "Fernandez", 50),
+                new Persona("Pablo", "Martinez", 29),
+                new Persona("David", "Sanchez", 33));
 
-            while (dato != -1) {
+        FileWriter escritor;
 
-                System.out.print((char) dato);
+        try {
 
-                dato = archivo.read();
+            escritor = new FileWriter("personas.txt");// hotfix
+//                                                         |
+            for (int i = 0; i < personas.size(); i++) {//  V
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+                for (int f = 0; f < personas.get(i).getNombre().length(); f++) {
+
+                    escritor.write(personas.get(i).getNombre().charAt(f));
+
+                }
+
+                escritor.write(" ");
+
+                for (int f = 0; f < personas.get(i).getApellido().length(); f++) {
+
+                    escritor.write(personas.get(i).getApellido().charAt(f));
+                    
+                }
+                
+                escritor.write(" ");
+
+                for (int f = 0; f < Math.log10(personas.get(i).getEdad()) + 1; f++) {
+
+                    escritor.write(personas.get(i).getApellido().charAt(f));
+                    
+                }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+                escritor.write("\n");
 
             }
 
-            archivo.close();
-
-            System.out.print("\n");
+            escritor.close();
 
         } catch (Exception e) {
 

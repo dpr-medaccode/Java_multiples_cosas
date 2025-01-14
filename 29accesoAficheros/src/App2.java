@@ -4,7 +4,7 @@ import java.io.FileReader;
 public class App2 {
     public static void main(String[] args) throws Exception {
 
-        FileReader archivo = new FileReader("archivo.txt");
+        FileReader archivo = new FileReader("personas.txt");
 
         BufferedReader lectorDeLinea = new BufferedReader(archivo);
 
