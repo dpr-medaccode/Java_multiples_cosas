@@ -10,7 +10,7 @@ public class App4 {
 
         try {
             
-            escritor = new FileWriter("archivo2.txt");
+            escritor = new FileWriter("archivo2.txt" /*,true*/);
 
             escritorDeLineas = new BufferedWriter(escritor);
 

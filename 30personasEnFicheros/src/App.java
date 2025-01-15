@@ -20,7 +20,6 @@ public class App {
             escritor = new FileWriter("personas.txt");// hotfix
 //                                                         |
             for (int i = 0; i < personas.size(); i++) {//  V
-
 //////////////////////////////////////////////////////////////////////////////////////////
 
                 for (int f = 0; f < personas.get(i).getNombre().length(); f++) {
