@@ -1,0 +1,5 @@
+Persona [id=0, nombre=nomber1, apellidos=apellido1, edad=18]
+Persona [id=1, nombre=nomber1, apellidos=apellido1, edad=19]
+Persona [id=2, nombre=nomber1, apellidos=apellido1, edad=20]
+Persona [id=3, nombre=nomber1, apellidos=apellido1, edad=21]
+Persona [id=4, nombre=nomber1, apellidos=apellido1, edad=22]
