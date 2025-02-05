@@ -28,6 +28,7 @@ public class App {
 
             switch (opcion) {
 
+
                 case 1:
 
                     FileOutputStream fos = null;
@@ -63,6 +64,9 @@ public class App {
                     } finally {
 
                         try {
+
+                            oos.close();
+                            fos.close();
 
                         } catch (Exception e) {
                             System.out.println(e.getMessage());
