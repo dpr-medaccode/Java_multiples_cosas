@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pacientes>
+    <paciente>
+        <habitacion>0</habitacion>
+        <cama>1</cama>
+        <nombre>Nombre 0</nombre>
+        <apellido>Apellido 0</apellido>
+        <dieta>Manzana 0</dieta>
+    </paciente>
+    <paciente>
+        <habitacion>1</habitacion>
+        <cama>2</cama>
+        <nombre>Nombre 1</nombre>
+        <apellido>Apellido 1</apellido>
+        <dieta>Manzana 1</dieta>
+    </paciente>
+    <paciente>
+        <habitacion>2</habitacion>
+        <cama>1</cama>
+        <nombre>Nombre 2</nombre>
+        <apellido>Apellido 2</apellido>
+        <dieta>Manzana 2</dieta>
+    </paciente>
+    <paciente>
+        <habitacion>3</habitacion>
+        <cama>2</cama>
+        <nombre>Nombre 3</nombre>
+        <apellido>Apellido 3</apellido>
+        <dieta>Manzana 3</dieta>
+    </paciente>
+    <paciente>
+        <habitacion>4</habitacion>
+        <cama>1</cama>
+        <nombre>Nombre 4</nombre>
+        <apellido>Apellido 4</apellido>
+        <dieta>Manzana 4</dieta>
+    </paciente>
+</pacientes>

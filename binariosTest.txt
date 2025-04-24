@@ -1,0 +1,342 @@
+ Pregunta 1
+0 / 1 pts
+
+class Alumno implements Serializable {
+    String nombre = "Sara";
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f11.dat"));
+oos.writeObject(new Alumno());
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f11.dat"));
+Alumno a = (Alumno) ois.readObject();
+System.out.println(a.nombre);
+Respuesta correcta
+  Sara
+  null
+  Alumno
+Respondido
+  Excepción
+ 
+Pregunta 2
+1 / 1 pts
+
+class Dato implements Serializable {
+    int valor = 100;
+}
+
+Dato d = new Dato();
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f12.dat"));
+oos.writeObject(d);
+oos.close();
+
+d.valor = 200;
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f12.dat"));
+Dato d2 = (Dato) ois.readObject();
+System.out.println(d2.valor);
+  Excepción
+  200
+  0
+¡Correcto!
+  100
+ 
+Pregunta 3
+1 / 1 pts
+
+class Persona implements Serializable {
+    transient int edad = 45;
+    String nombre = "Luis";
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f13.dat"));
+oos.writeObject(new Persona());
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f13.dat"));
+Persona p = (Persona) ois.readObject();
+System.out.println(p.nombre + " " + p.edad);
+¡Correcto!
+  Luis 45
+  Luis 0
+  null 45
+  null 0
+ 
+Pregunta 4
+1 / 1 pts
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f14.dat"));
+oos.writeObject(null);
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f14.dat"));
+System.out.println(ois.readObject());
+¡Correcto!
+  null
+  Excepción
+  Object
+  0
+ 
+Pregunta 5
+0 / 1 pts
+
+class A implements Serializable {
+    String texto = "Hola";
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f15.dat"));
+A a = new A();
+oos.writeObject(a);
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f15.dat"));
+System.out.println(((A) ois.readObject()).texto.length());
+Respuesta correcta
+  4
+  5
+  0
+Respondido
+  Excepción
+ 
+Pregunta 6
+1 / 1 pts
+
+class X implements Serializable {
+    int n = 7;
+    public String toString() {
+        return "X=" + n;
+    }
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f16.dat"));
+oos.writeObject(new X());
+oos.writeObject(new X());
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f16.dat"));
+ois.readObject();
+System.out.println(ois.readObject());
+¡Correcto!
+  X=7
+  X=0
+  null
+  Excepción
+ 
+Pregunta 7
+1 / 1 pts
+
+class Nodo implements Serializable {
+    Nodo siguiente;
+    int valor;
+    Nodo(int v) { valor = v; }
+}
+
+Nodo n1 = new Nodo(10);
+Nodo n2 = new Nodo(20);
+n1.siguiente = n2;
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f17.dat"));
+oos.writeObject(n1);
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f17.dat"));
+Nodo leido = (Nodo) ois.readObject();
+System.out.println(leido.siguiente.valor);
+  10
+¡Correcto!
+  20
+  0
+  Excepción
+ 
+Pregunta 8
+0 / 1 pts
+
+class Cliente implements Serializable {
+    String nombre;
+    Cliente(String n) { nombre = n; }
+    public String toString() { return nombre; }
+}
+
+Cliente c1 = new Cliente("Eva");
+Cliente c2 = new Cliente("Eva");
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f18.dat"));
+oos.writeObject(c1);
+oos.writeObject(c1);
+oos.writeObject(c2);
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f18.dat"));
+System.out.println(ois.readObject() == ois.readObject());
+Respuesta correcta
+  True
+Respondido
+  False
+  NULL
+  Excepción
+ 
+Pregunta 9
+0 / 1 pts
+
+class Valor implements Serializable {
+    int dato;
+    Valor(int d) { dato = d; }
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f19.dat"));
+for (int i = 1; i <= 3; i++) {
+    oos.writeObject(new Valor(i));
+}
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f19.dat"));
+int suma = 0;
+for (int i = 1; i <= 3; i++) {
+    suma += ((Valor) ois.readObject()).dato;
+}
+System.out.println(suma);
+Respuesta correcta
+  3
+Respondido
+  6
+  0
+  Excepción
+ 
+Pregunta 10
+0 / 1 pts
+
+class A implements Serializable {
+    int x = 10;
+}
+
+class B extends A {
+    int y = 20;
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f20.dat"));
+oos.writeObject(new B());
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f20.dat"));
+A obj = (A) ois.readObject();
+System.out.println(obj.x);
+Respuesta correcta
+  10
+  20
+  Excepción
+Respondido
+  Error de compilación
+ 
+Pregunta 11
+0 / 1 pts
+
+class Alumno implements Serializable {
+    String nombre;
+    Alumno(String n) { nombre = n; }
+    public String toString() { return nombre; }
+}
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f21.dat"));
+for (int i = 1; i <= 3; i++) {
+    oos.writeObject(new Alumno("A" + i));
+}
+oos.close();
+  Solo el último alumno
+  Solo nombres separados por comas
+Respondido
+  Error de compilación
+Respuesta correcta
+  Todos los objetos Alumno A1, A2, A3
+ 
+Pregunta 12
+0 / 1 pts
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f21.dat"));
+while (true) {
+    Alumno a = (Alumno) ois.readObject();
+    System.out.println(a);
+}
+  Se imprimen todos los alumnos
+Respuesta correcta
+  Excepción EOFException al final
+  Se imprime el último alumno varias veces
+Respondido
+  Solo se imprime el primero
+ 
+Pregunta 13
+0 / 1 pts
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f21.dat"));
+try {
+    while (true) {
+        Alumno a = (Alumno) ois.readObject();
+        System.out.println(a.nombre);
+    }
+} catch (EOFException e) {
+    System.out.println("Fin del fichero");
+}
+Respuesta correcta
+  A1 A2 A3 Fin del fichero
+Respondido
+  Fin del fichero
+  Solo A1 A2 A3
+  Excepción no controlada
+ 
+Pregunta 14
+0 / 1 pts
+
+class Producto implements Serializable {
+    String nombre;
+    Producto(String n) { nombre = n; }
+}
+
+List<Producto> productos = Arrays.asList(
+    new Producto("Ratón"), new Producto("Teclado"), new Producto("Monitor")
+);
+
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("f24.dat"));
+for (Producto p : productos) oos.writeObject(p);
+oos.close();
+
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f24.dat"));
+int contador = 0;
+try {
+    while (true) {
+        Producto p = (Producto) ois.readObject();
+        contador++;
+    }
+} catch (EOFException e) {
+    System.out.println(contador);
+}
+Respuesta correcta
+  Excepción
+  0
+Respondido
+  2
+  3
+ 
+Pregunta 15
+0 / 1 pts
+
+class Libro implements Serializable {
+    String titulo;
+    Libro(String t) { titulo = t; }
+}
+
+List<Libro> lista = new ArrayList<>();
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("f25.dat"));
+try {
+    while (true) {
+        lista.add((Libro) ois.readObject());
+    }
+} catch (EOFException e) {
+    System.out.println(lista.size());
+}
+Respuesta correcta
+  5
+  4
+  6
+Respondido
+  Excepción
+
