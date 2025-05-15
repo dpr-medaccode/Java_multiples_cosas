@@ -1,0 +1,9 @@
+media areeglar
+
+buscar nombres reptidos
+
+delete cascade
+
+crear clave foranea
+
+traerser proyecto maven para tenerlo preparado ya
