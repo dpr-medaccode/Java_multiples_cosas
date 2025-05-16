@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
 public class PeliculaDAO {
 
     public static Resultado<Pelicula> insertPelicula(Pelicula pelicula, DbConn conn) {
@@ -169,20 +168,62 @@ public class PeliculaDAO {
 
         }
 
-        ArrayList <Pelicula> pelisrepe = new ArrayList<Pelicula>();
+        ArrayList<Pelicula> pelisrepe = new ArrayList<Pelicula>();
 
         map.forEach((calve, valor) -> {
 
             if (valor > 1) {
 
                 pelisrepe.add(calve);
-                
+
             }
 
         });
 
         return pelisrepe;
 
+    }
+
+    public static void explorarPeliculas(DbConn conn) {
+        try {
+            String sql = "SELECT * FROM peliculas";
+            PreparedStatement stmt = conn.getConn().prepareStatement(
+                    sql,
+                    ResultSet.TYPE_SCROLL_INSENSITIVE,
+                    ResultSet.CONCUR_READ_ONLY);
+
+            ResultSet rs = stmt.executeQuery();
+
+            // Mostrar primera película
+            if (rs.first()) {
+                System.out.println("Primera película: " + rs.getString("titulo"));
+            }
+
+            // Mostrar última película
+            if (rs.last()) {
+                System.out.println("Última película: " + rs.getString("titulo"));
+            }
+
+            // Mostrar película número 3
+            if (rs.absolute(3)) {
+                System.out.println("Película en posición 3: " + rs.getString("titulo"));
+            }
+
+            // Movernos 2 filas adelante desde donde estamos
+            if (rs.relative(2)) {
+                System.out.println("2 después: " + rs.getString("titulo"));
+            }
+
+            // Recorrer todas las películas hacia atrás desde el final
+            System.out.println("\nRecorriendo en reversa:");
+            rs.afterLast(); // colocar cursor después de la última
+            while (rs.previous()) {
+                System.out.println("- " + rs.getString("titulo"));
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
 }
